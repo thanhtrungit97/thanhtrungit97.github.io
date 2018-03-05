@@ -1153,7 +1153,7 @@ var WeatherService = /** @class */ (function () {
         this.http = http;
     }
     WeatherService.prototype.getTemp = function (city) {
-        var url = "http://api.openweathermap.org/data/2.5/weather?units=metric&appid=839d117f07b2ff55016f8b427a84a84d&q=";
+        var url = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=839d117f07b2ff55016f8b427a84a84d&q=";
         return this.http.get(url + city)
             .toPromise().then(function (res) { return res.json(); })
             .then(function (resJson) { return resJson.main.temp; });
